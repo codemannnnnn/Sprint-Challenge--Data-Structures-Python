@@ -1,5 +1,5 @@
 import time
-from linkedlist import LinkedList
+from bst import BSTNode
 
 start_time = time.time()
 
@@ -19,24 +19,23 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-# new solution
-# ll = LinkedList()
-#
-# def solution_two():
+
+bst = BSTNode('names')
+
+for i in names_1:
+    bst.insert(i)
+
+for i in names_2:
+    if bst.contains(i):
+        duplicates.append(i)
+
+
+
+# def solution():
 #     for i in names_1:
 #         if i == i in names_2:
-#             ll.add_to_tail(i)
-# solution_two()
-#
-# if
-
-
-
-def solution():
-    for i in names_1:
-        if i == i in names_2:
-            duplicates.append(i)
-solution()
+#             duplicates.append(i)
+# solution()
 
 
 
